@@ -829,51 +829,33 @@ section,
   background-repeat: no-repeat;
   overflow: hidden;
   transition-duration: 0.4s;
+  min-height: 100vh;
 }
 .hero .carousel-item img {
   object-fit: cover;
   object-position: center;
   width: 100%;
-  height: 100vh;
-}
-.hero .carousel-control-prev {
-  left: 0;
-  right: auto;
-  padding-left: 10px;
+  min-height: 100vh;
 }
 
+.hero .carousel-control-prev,
 .hero .carousel-control-next {
-  right: 0;
-  left: auto;
-  padding-right: 10px;
-}
-
-@media (max-width: 768px) {
-  .hero .carousel-control-prev,
-  .hero .carousel-control-next {
-    width: 40px;
-    height: 40px;
-  }
-}
-.hero .carousel-control-next-icon,
-.hero .carousel-control-prev-icon {
-  background: none;
-  font-size: 26px;
-  line-height: 0;
-  background: #364d59d1;
-  color: #fff;
-  border-radius: 50px;
+  z-index: 50;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   width: 54px;
   height: 54px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.hero .carousel-control-prev,
-.hero .carousel-control-next {
-  z-index: 3;
+  background-color: #000000e0;
+  color: #fff;
+  border-radius: 100%;
+  margin: 0 10px;
   transition: 0.3s;
+  cursor: pointer;
+  pointer-events: all;
 }
 
 .hero .carousel-control-prev:focus,
@@ -885,7 +867,12 @@ section,
 .hero .carousel-control-next:hover {
   opacity: 0.9;
 }
-
+.bi-chevron-right::before {
+  content: "";
+}
+.bi-chevron-left::before {
+  content: "";
+}
 .hero {
   width: 100%;
   min-height: 100vh;

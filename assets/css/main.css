@@ -912,7 +912,7 @@ section,
   position: absolute;
   z-index: 20;
   color: white;
-  margin: 0 auto;
+  inset: 0;
 }
 
 @media (max-width: 768px), (max-height: 480px) {

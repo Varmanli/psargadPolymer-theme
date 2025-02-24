@@ -858,6 +858,14 @@ section,
   pointer-events: all;
 }
 
+@media (max-width: 1199px) {
+  .hero .carousel-control-prev,
+  .hero .carousel-control-next {
+    width: 23px;
+    height: 23px;
+    padding: 5px;
+  }
+}
 .hero .carousel-control-prev:focus,
 .hero .carousel-control-next:focus {
   opacity: 0.5;
@@ -904,6 +912,7 @@ section,
   position: absolute;
   z-index: 20;
   color: white;
+  margin: 0 auto;
 }
 
 @media (max-width: 768px), (max-height: 480px) {
@@ -1489,6 +1498,7 @@ section,
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   border-radius: 5px;
+  margin: 0 auto;
 }
 
 .team .team-member .member-img {

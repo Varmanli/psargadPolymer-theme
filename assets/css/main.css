@@ -843,7 +843,10 @@ section,
 }
 .background-hreo {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 70px;
   background: #000000aa;
   z-index: 10;
 }

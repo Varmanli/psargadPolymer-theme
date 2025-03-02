@@ -1052,7 +1052,9 @@ section,
 .featured-services .service-item:hover p {
   color: var(--contrast-color);
 }
-
+.featured-services .service-item:hover p{
+  display:block;
+}
 .featured-services .service-item:hover:before {
   background: var(--accent-color);
   inset: 0;

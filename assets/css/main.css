@@ -832,6 +832,11 @@ section,
     width: 1800px;
   }
 }
+@media (min-width: 1900px) {
+  .background-video {
+    width: 2300px;
+  }
+}
 .hero {
   width: 100%;
   min-height: 80vh;

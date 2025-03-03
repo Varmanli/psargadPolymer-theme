@@ -1192,11 +1192,15 @@ section,
   margin-bottom: 15px;
 }
 .stats-item a {
-  position: absolute;
-  bottom: 18%;
-  right: 26%;
   font-weight: bold;
   font-size: 30px;
+  margin-left:-18px;
+}
+.stats-number{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
 }
 /*--------------------------------------------------------------
 # Clients Section

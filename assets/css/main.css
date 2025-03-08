@@ -12,10 +12,18 @@
   font-weight: 700;
   font-style: normal;
 }
-:root {
-  font-family: "Dana";
+@font-face {
+  font-family: "Shabnam";
+  src: url("../font/Shabnam.woff2");
+  font-weight: 400;
+  font-style: normal;
 }
-
+@font-face {
+  font-family: "Shabnam";
+  src: url("../font/Shabnam-Bold.woff2");
+  font-weight: 700;
+  font-style: normal;
+}
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
@@ -62,7 +70,7 @@
 body {
   color: var(--default-color);
   background-color: var(--background-color);
-  font-family: var(--default-font);
+  font-family: Dana;
 }
 
 a {
@@ -83,7 +91,7 @@ h4,
 h5,
 h6 {
   color: var(--heading-color);
-  font-family: var(--heading-font);
+  font-family: Shabnam;
 }
 
 /* PHP Email Form Messages
@@ -147,28 +155,14 @@ h6 {
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 20px 0;
+  padding: 10px 0;
   transition: all 0.5s;
   z-index: 997;
 }
 
 .header .logo img {
-  max-height: 32px;
+  max-width: 220px;
   margin-right: 8px;
-}
-
-.header .logo h1 {
-  font-size: 24px;
-  margin: 0;
-  font-weight: 700;
-  color: var(--heading-color);
-}
-
-.header .logo span {
-  font-size: 24px;
-  padding-left: 1px;
-  font-family: var(--heading-font);
-  color: var(--color-primary);
 }
 
 .scrolled .header {
@@ -800,15 +794,15 @@ section,
   display: inline-block;
   text-transform: uppercase;
   border-radius: 50px;
-  font-family: var(--default-font);
+  font-family: Shabnam;
 }
 
 .section-title p {
-  color: var(--heading-color);
+  color: Shabnam;
   margin: 10px 0 0 0;
   font-size: 32px;
   font-weight: 700;
-  font-family: var(--heading-font);
+  font-family: Shabnam;
 }
 
 .section-title p .description-title {
@@ -1125,11 +1119,10 @@ section,
   gap: 50px;
 }
 
-
 @media (max-width: 768px) {
   .stats-container {
-    flex-direction: column; 
-    gap: 50px; 
+    flex-direction: column;
+    gap: 50px;
   }
 }
 
@@ -1162,27 +1155,33 @@ section,
 }
 .stats .stats-item span {
   font-size: 36px;
-  margin-right: 20px;
   display: block;
   font-weight: 700;
 }
 
-.stats .stats-item p {
+.stats .stats-item .years {
   padding: 0;
   margin: 0;
-  font-family: var(--heading-font);
+  font-family: Shabnam;
   font-size: 16px;
 }
 @media (max-width: 768px) {
-  .stats .stats-item{
+  .stats .stats-item {
     width: 70%;
   }
 }
-
-.stats h2{
+#stats-2 {
+  font-size: 25px;
+}
+.virgol {
+  font-size: 25px;
+  margin-top: 15px;
+}
+.stats h2 {
   font-weight: bold;
   font-size: 28px;
   margin-bottom: 45px;
+  font-family: Shabnam;
 }
 .stats img {
   width: 70px;
@@ -1190,10 +1189,9 @@ section,
 }
 .stats-item a {
   font-weight: bold;
-  font-size: 30px;
-  margin-left:-18px;
+  font-size: 24px;
 }
-.stats-number{
+.stats-number {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
@@ -1444,8 +1442,8 @@ section,
   position: relative;
   overflow: hidden;
 }
-.portfolio-filters svg{
-  cursor:pointer;
+.portfolio-filters svg {
+  cursor: pointer;
   padding: 3px;
   padding: 0 13px;
   margin-top: 7px;
@@ -1996,7 +1994,7 @@ section,
 .recent-blog-posts .post-item:hover .post-img img {
   transform: scale(1.1);
 }
-.blog-button{
+.blog-button {
   width: 150px;
   margin: 0 auto;
   margin-top: 50px;
@@ -2005,8 +2003,8 @@ section,
   padding: 4px;
   background-color: var(--accent-color);
   color: var(--contrast-color);
-  transition:1s;
+  transition: 1s;
 }
-.blog-button:hover{
+.blog-button:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
